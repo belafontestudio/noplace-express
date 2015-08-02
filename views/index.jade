@@ -1,0 +1,65 @@
+extends layout
+
+block content
+  //- h1= title
+  //- p Welcome to #{title}
+  #cover
+    ul#scene1
+      
+      li.layer(data-depth='0.80')
+        img.one(src='/img/full.jpg')
+      li.layer(data-depth='0.40')
+        img.two(src='/img/full.jpg')
+      li.layer(data-depth='0.00')
+        img.three(src='/img/full.jpg')
+      
+    ul#scene2
+      li.layer(data-depth='0.80')
+        img.one(src='/img/girl2.jpg')
+      li.layer(data-depth='0.40')
+        img.two(src='/img/girl2.jpg')
+      li.layer(data-depth='0.00')
+        img.three(src='/img/girl2.jpg')
+    ul#scene3
+      li.layer(data-depth='0.80')
+        .logos
+          img.np(src='/img/np.png')
+          img.ci(src='/img/ci.png')
+  #vision
+    h1
+      | Noplace is a biannual digital magazine 
+      br
+      | that will let you travel trough the stories of people doing outstanding things around the globe.    
+  #mission
+    h2
+      | The magazine collects photographic essays, interviews and article inspired by a common topic for each issue, related to fashion, culture, art, architecture, design, food and lifestyle.
+  #instagram-feed
+    each instagram in instagrams
+      //- script.
+      //-   var instagram = !{JSON.stringify(instagram.images.standard_resolution)}
+      //-   console.log(instagram)
+      .instagram
+        .picture
+          a(href="#{instagram.link}", target="_blank")
+            img(src="#{instagram.images.standard_resolution.url}")/
+            .hover
+              .bkgr
+              .text
+                p= instagram.likes.count
+                h3= instagram.caption.text
+  #subscribe
+    h3
+      | Noplace  will be available on all major e-book distribution platforms starting from Autumn 2015.
+  #social
+    p follow us
+    a(href="https://instagram.com/noplacemag/")
+      i.fa.fa-instagram.fa-2x
+    a(href="https://twitter.com/noplacemag")
+      i.fa.fa-twitter.fa-2x
+    a(href="https://www.facebook.com/noplacemag?fref=ts")
+      i.fa.fa-facebook.fa-2x
+    a(href="http://airportmag.tumblr.com")
+      i.fa.fa-tumblr.fa-2x
+  #footer
+    p ©2015 Noplace Magazine — a Belafonte Studio publication, all rights reserved.
+    

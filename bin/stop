@@ -1,0 +1,12 @@
+mkdir -p /home/piermaria/webapps/experientia_staging/run
+pid=$(/sbin/pidof /home/piermaria/webapps/experientia_staging/bin/node)
+if echo "$pid" | grep -q " "; then
+    pid=""
+fi
+if [ -n "$pid" ]; then
+  user=$(ps -p $pid -o user | tail -n 1)
+  if [ $user = "piermaria" ]; then
+    kill "$pid"
+    rm -f /home/piermaria/webapps/experientia_staging/run/node.pid
+  fi
+fi
