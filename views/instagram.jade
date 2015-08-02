@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  each instagram in instagrams
+    //- script.
+    //-   var instagram = !{JSON.stringify(instagram.images.standard_resolution)}
+    //-   console.log(instagram)
+
+    a(href="#{instagram.link}", target="_blank")
+      h2= instagram.caption.text
+      p= instagram.likes.count
+      img(src="#{instagram.images.standard_resolution.url}")/

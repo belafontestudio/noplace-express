@@ -2,12 +2,22 @@ var gulp = require('gulp'),
   nodemon = require('gulp-nodemon'),
   plumber = require('gulp-plumber'),
   livereload = require('gulp-livereload'),
-  stylus = require('gulp-stylus');
+  stylus = require('gulp-stylus'),
+  postcss = require('gulp-postcss'),
+  sourcemaps = require('gulp-sourcemaps'),
+  autoprefixer = require('autoprefixer'),
+  lost = require('lost');
 
 gulp.task('stylus', function () {
   gulp.src('./public/css/*.styl')
     .pipe(plumber())
     .pipe(stylus())
+    .pipe(sourcemaps.init())
+    .pipe(postcss([
+      lost(),
+      autoprefixer()
+    ]))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./public/css'))
     .pipe(livereload());
 });

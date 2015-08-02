@@ -1,6 +1,177 @@
-body
-  padding 50px
-  font 14px "Lucida Grande", Helvetica, Arial, sans-serif
+@font-face {
+    font-family: 'ATC Overlook';
+    src: url('/fonts/ATC Overlook/ATCOverlook-Regular.eot');
+    src: url('/fonts/ATC Overlook/ATCOverlook-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ATC Overlook/ATCOverlook-Regular.woff2') format('woff2'),
+         url('/fonts/ATC Overlook/ATCOverlook-Regular.woff') format('woff'),
+         url('/fonts/ATC Overlook/ATCOverlook-Regular.ttf') format('truetype'),
+         url('/fonts/ATC Overlook/ATCOverlook-Regular.svg#ATCOverlook-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 
-a
-  color #00B7FF
+}
+@font-face {
+    font-family: 'youngserifregular';
+    src: url('/fonts/youngserif/youngserif-regular-webfont.eot');
+    src: url('/fonts/youngserif/youngserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/youngserif/youngserif-regular-webfont.woff2') format('woff2'),
+         url('/fonts/youngserif/youngserif-regular-webfont.woff') format('woff'),
+         url('/fonts/youngserif/youngserif-regular-webfont.ttf') format('truetype'),
+         url('/fonts/youngserif/youngserif-regular-webfont.svg#youngserifregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*
+  font-family 'ATC Overlook'
+  font-weight normal
+body
+  margin 0
+  padding 0
+  overflow-x hidden
+
+
+#cover
+  lost-center 100% 0
+
+
+ul#scene1, ul#scene2
+  float left
+  width 50%
+  height 100%
+  padding 0
+  margin 0
+
+  img
+    width 100%
+
+  li.girl
+    height 800px
+    overflow hidden
+  img.girl
+    width 50%
+
+  img.one
+    opacity 0.4
+
+  img.two
+    opacity 0.6
+  img.three
+    opacity 0.8
+
+#scene3
+  position absolute
+  top 0
+  left 0
+  right 0
+  bottom 0
+  padding 0
+  margin 0
+  li
+    width 100%
+    height 100%
+  .logos
+    margin 20% auto
+    display block
+    width 554px
+  img
+    width auto
+    height auto
+  .np,.ci
+    position absolute
+
+  .ci
+    display none
+#vision
+  lost-center 50% 0
+  text-align center
+
+
+  h1
+    margin-top 100px
+    margin-bottom 50px
+    font-size 28px
+    font-family youngserif
+
+#mission
+  lost-center 30% 0
+  
+  h2
+
+    margin-top 50px
+    text-align left
+    font-size 20px
+    margin-bottom 100px
+
+#subscribe
+  margin-top 100px
+  lost-center 50% 0
+
+  h3
+
+    text-align center
+    font-size 22px
+    font-family youngserif
+#social
+  lost-center 50% 0
+  text-align center
+  margin-top 50px
+  margin-bottom 100px
+  a
+    padding 0 10px
+    text-decoration none
+    color silver
+    &:hover
+      color black
+#footer
+  lost-center 50% 0
+  text-align center
+#instagram-feed
+  lost-center 70% 0
+
+.instagram
+  lost-column 1/2
+  float left
+  position relative
+  font-family sans-serif
+  margin-top 30px
+  &:hover
+    .hover
+      display block
+  &:nth-child(even)
+    img
+      float left
+  &:nth-child(odd)
+    img
+      float right
+  img
+    width auto
+    max-width 100%
+  .hover
+    display none
+    position absolute
+    top 0
+    left 0
+    right 0
+    bottom 0
+    .bkgr
+      background-color white
+      opacity 0.5
+      position absolute
+      top 0
+      left 0
+      right 0
+      bottom 0
+    .text
+
+      position relative
+      z-index 10
+      text-align center
+      color black
+      padding 60px
+      p
+        font-family youngserif
+        font-size 28px
+      h3
+        font-size 18px
