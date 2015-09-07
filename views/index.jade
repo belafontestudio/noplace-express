@@ -47,9 +47,21 @@ block content
               .text
                 p= instagram.likes.count
                 h3= instagram.caption.text
+  
+  
+  
   #subscribe
     h3
       | Noplace  will be available on all major e-book distribution platforms starting from Autumn 2015.
+    form#mailchimp(action='#', method='post', class='form-inline')
+      div#form(class='input-append')
+        input.email(type='email', name='email', placeholder='email address')
+        input.submit(type='submit', class='btn', value='Subscribe')
+    #success
+      p Subscribed! Check your mail for confirmation
+    #error
+      p An error occurred. Reload page and try again
+
   #social
     p follow us
     a(href="https://instagram.com/noplacemag/")

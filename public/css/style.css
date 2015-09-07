@@ -160,29 +160,6 @@ ul#scene2 img.three {
   font-size: 20px;
   margin-bottom: 100px;
 }
-#subscribe {
-  margin-top: 100px;
-  *zoom: 1;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 0;
-  padding-right: 0;
-}
-#subscribe:before {
-  content: '';
-  display: table;
-}
-#subscribe:after {
-  content: '';
-  display: table;
-  clear: both;
-}
-#subscribe h3 {
-  text-align: center;
-  font-size: 22px;
-  font-family: youngserif;
-}
 #social {
   *zoom: 1;
   max-width: 50%;
@@ -310,6 +287,55 @@ ul#scene2 img.three {
 }
 .instagram .hover .text h3 {
   font-size: 18px;
+}
+/*  SUBSCRIBE */
+#subscribe {
+  margin-top: 100px;
+  *zoom: 1;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+}
+#subscribe:before {
+  content: '';
+  display: table;
+}
+#subscribe:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#subscribe h3 {
+  text-align: center;
+  font-size: 22px;
+  font-family: youngserif;
+}
+#subscribe #form {
+  text-align: center;
+}
+#subscribe #form .email {
+  width: 300px;
+  padding: 5px;
+}
+#subscribe #form .submit {
+  width: 100px;
+  border: 1px solid #d3d3d3;
+  border-radius: 0;
+  background: #fff;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+#subscribe #form .submit:hover {
+  background: #d3d3d3;
+  color: #fff;
+}
+#subscribe #success {
+  display: none;
+}
+#subscribe #error {
+  display: none;
 }
 @media only screen and (min-width: 1050px) {
   #scene3 .logos {

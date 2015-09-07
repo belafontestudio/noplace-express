@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+
 Instagram = require('instagram-node-lib');
 
 Instagram.set('client_id', '9e636d14946745eab4a5e91e2d53054c');
@@ -26,6 +27,7 @@ router.get('/', function(req, res) {
     }});
 
 });
+
 
 
 module.exports = router;
