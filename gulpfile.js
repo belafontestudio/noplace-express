@@ -6,12 +6,15 @@ var gulp = require('gulp'),
   postcss = require('gulp-postcss'),
   sourcemaps = require('gulp-sourcemaps'),
   autoprefixer = require('autoprefixer'),
-  lost = require('lost');
+  lost = require('lost'),
+  rupture = require('rupture'),
+  nib = require('nib');
 
 gulp.task('stylus', function () {
+
   gulp.src('./public/css/*.styl')
     .pipe(plumber())
-    .pipe(stylus())
+    .pipe(stylus({use: [nib(), rupture()]}))
     .pipe(sourcemaps.init())
     .pipe(postcss([
       lost(),

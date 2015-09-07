@@ -1,47 +1,54 @@
 @font-face {
     font-family: 'ATC Overlook';
-    src: url('/fonts/ATC Overlook/ATCOverlook-Regular.eot');
-    src: url('/fonts/ATC Overlook/ATCOverlook-Regular.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/ATC Overlook/ATCOverlook-Regular.woff2') format('woff2'),
-         url('/fonts/ATC Overlook/ATCOverlook-Regular.woff') format('woff'),
-         url('/fonts/ATC Overlook/ATCOverlook-Regular.ttf') format('truetype'),
-         url('/fonts/ATC Overlook/ATCOverlook-Regular.svg#ATCOverlook-Regular') format('svg');
+    src: url('/fonts/ATCOverlook/EOT/ATCOverlook-Regular.eot');
+    src: url('/fonts/ATCOverlook/EOT/ATCOverlook-Regular.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/ATCOverlook/WOFF/ATCOverlook-Regular.woff') format('woff'),
+         url('/fonts/ATCOverlook/TTF/ATCOverlook-Regular.ttf') format('truetype'),
+         url('/fonts/ATCOverlook/SVG/ATCOverlook-Regular.svg#ATCOverlook-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 @font-face {
-    font-family: 'youngserifregular';
-    src: url('/fonts/youngserif/youngserif-regular-webfont.eot');
-    src: url('/fonts/youngserif/youngserif-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/fonts/youngserif/youngserif-regular-webfont.woff2') format('woff2'),
-         url('/fonts/youngserif/youngserif-regular-webfont.woff') format('woff'),
-         url('/fonts/youngserif/youngserif-regular-webfont.ttf') format('truetype'),
-         url('/fonts/youngserif/youngserif-regular-webfont.svg#youngserifregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'youngserif';
+  src: url('/fonts/youngserif/YoungSerif-Regular.eot');
+  src: url('/fonts/youngserif/YoungSerif-Regular.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/youngserif/YoungSerif-Regular.woff') format('woff'),
+       url('/fonts/youngserif/YoungSerif-Regular.ttf')  format('truetype'),
+       url('/fonts/youngserif/YoungSerif-Regular.svg#31f7e7e56403a5dba26824b3cad8352d') format('svg');
 
+  font-style:   normal;
+  font-weight:  400;
 }
+
+scale = 0 400px 600px 800px 1050px
 
 *
   font-family 'ATC Overlook'
   font-weight normal
-body
+html, body
   margin 0
   padding 0
   overflow-x hidden
+  width 100%
+  left 0
+  right 0
 
-
+#main
+  overflow-x hidden
 #cover
   lost-center 100% 0
+  overflow-x hidden
 
-
+#scene1,#scene2,#scene3
+  overflow-x hidden
 ul#scene1, ul#scene2
   float left
   width 50%
   height 100%
   padding 0
   margin 0
+
 
   img
     width 100%
@@ -74,9 +81,9 @@ ul#scene1, ul#scene2
   .logos
     margin 20% auto
     display block
-    width 554px
+    width 277px
   img
-    width auto
+    width 277px
     height auto
   .np,.ci
     position absolute
@@ -96,7 +103,7 @@ ul#scene1, ul#scene2
 
 #mission
   lost-center 30% 0
-  
+
   h2
 
     margin-top 50px
@@ -175,3 +182,10 @@ ul#scene1, ul#scene2
         font-size 28px
       h3
         font-size 18px
+
++desktop()
+  #scene3
+    .logos
+      width 554px
+    img
+      width 554px

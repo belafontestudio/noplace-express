@@ -13,7 +13,7 @@ router.get('/', function(req, res) {
     complete: function(data, pagination){
       // data is a javascript object/array/null matching that shipped Instagram
       // when available (mostly /recent), pagination is a javascript object with the pagination information
-      console.log(data, pagination);
+      //console.log(data, pagination);
       res.locals.instagrams = data;
       res.render('index');
     },

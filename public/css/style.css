@@ -1,24 +1,31 @@
 @font-face {
   font-family: 'ATC Overlook';
-  src: url("/fonts/ATC Overlook/ATCOverlook-Regular.eot");
-  src: url("/fonts/ATC Overlook/ATCOverlook-Regular.eot?#iefix") format('embedded-opentype'), url("/fonts/ATC Overlook/ATCOverlook-Regular.woff2") format('woff2'), url("/fonts/ATC Overlook/ATCOverlook-Regular.woff") format('woff'), url("/fonts/ATC Overlook/ATCOverlook-Regular.ttf") format('truetype'), url("/fonts/ATC Overlook/ATCOverlook-Regular.svg#ATCOverlook-Regular") format('svg');
+  src: url("/fonts/ATCOverlook/EOT/ATCOverlook-Regular.eot");
+  src: url("/fonts/ATCOverlook/EOT/ATCOverlook-Regular.eot?#iefix") format('embedded-opentype'), url("/fonts/ATCOverlook/WOFF/ATCOverlook-Regular.woff") format('woff'), url("/fonts/ATCOverlook/TTF/ATCOverlook-Regular.ttf") format('truetype'), url("/fonts/ATCOverlook/SVG/ATCOverlook-Regular.svg#ATCOverlook-Regular") format('svg');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'youngserifregular';
-  src: url("/fonts/youngserif/youngserif-regular-webfont.eot");
-  src: url("/fonts/youngserif/youngserif-regular-webfont.eot?#iefix") format('embedded-opentype'), url("/fonts/youngserif/youngserif-regular-webfont.woff2") format('woff2'), url("/fonts/youngserif/youngserif-regular-webfont.woff") format('woff'), url("/fonts/youngserif/youngserif-regular-webfont.ttf") format('truetype'), url("/fonts/youngserif/youngserif-regular-webfont.svg#youngserifregular") format('svg');
-  font-weight: normal;
+  font-family: 'youngserif';
+  src: url("/fonts/youngserif/YoungSerif-Regular.eot");
+  src: url("/fonts/youngserif/YoungSerif-Regular.eot?#iefix") format('embedded-opentype'), url("/fonts/youngserif/YoungSerif-Regular.woff") format('woff'), url("/fonts/youngserif/YoungSerif-Regular.ttf") format('truetype'), url("/fonts/youngserif/YoungSerif-Regular.svg#31f7e7e56403a5dba26824b3cad8352d") format('svg');
   font-style: normal;
+  font-weight: 400;
 }
 * {
   font-family: 'ATC Overlook';
   font-weight: normal;
 }
+html,
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+#main {
   overflow-x: hidden;
 }
 #cover {
@@ -28,6 +35,7 @@ body {
   margin-right: auto;
   padding-left: 0;
   padding-right: 0;
+  overflow-x: hidden;
 }
 #cover:before {
   content: '';
@@ -37,6 +45,11 @@ body {
   content: '';
   display: table;
   clear: both;
+}
+#scene1,
+#scene2,
+#scene3 {
+  overflow-x: hidden;
 }
 ul#scene1,
 ul#scene2 {
@@ -87,10 +100,10 @@ ul#scene2 img.three {
 #scene3 .logos {
   margin: 20% auto;
   display: block;
-  width: 554px;
+  width: 277px;
 }
 #scene3 img {
-  width: auto;
+  width: 277px;
   height: auto;
 }
 #scene3 .np,
@@ -297,6 +310,14 @@ ul#scene2 img.three {
 }
 .instagram .hover .text h3 {
   font-size: 18px;
+}
+@media only screen and (min-width: 1050px) {
+  #scene3 .logos {
+    width: 554px;
+  }
+  #scene3 img {
+    width: 554px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
