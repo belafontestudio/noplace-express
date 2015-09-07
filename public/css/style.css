@@ -314,22 +314,33 @@ ul#scene2 img.three {
 }
 #subscribe #form {
   text-align: center;
+  margin: 85px 0;
 }
 #subscribe #form .email {
   width: 300px;
   padding: 5px;
+  padding-left: 0;
+  border: 0;
+  border-bottom: 4px solid #000;
+  font-size: 0.9em;
+}
+#subscribe #form .email:focus {
+  outline: none;
 }
 #subscribe #form .submit {
-  width: 100px;
-  border: 1px solid #d3d3d3;
+  color: #808080;
+  border: 0;
+  border-bottom: 4px solid #000;
   border-radius: 0;
   background: #fff;
-  padding: 6px 10px;
+  padding: 5px 10px;
   cursor: pointer;
 }
+#subscribe #form .submit:focus {
+  outline: none;
+}
 #subscribe #form .submit:hover {
-  background: #d3d3d3;
-  color: #fff;
+  opacity: 0.95;
 }
 #subscribe #success {
   display: none;
