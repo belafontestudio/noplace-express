@@ -111,15 +111,7 @@ ul#scene1, ul#scene2
     font-size 20px
     margin-bottom 100px
 
-#subscribe
-  margin-top 100px
-  lost-center 50% 0
 
-  h3
-
-    text-align center
-    font-size 22px
-    font-family youngserif
 #social
   lost-center 50% 0
   text-align center
@@ -182,6 +174,51 @@ ul#scene1, ul#scene2
         font-size 28px
       h3
         font-size 18px
+
+/*  SUBSCRIBE */
+
+#subscribe
+  margin-top 100px
+  lost-center 50% 0
+
+  h3
+
+    text-align center
+    font-size 22px
+    font-family youngserif
+
+  #form
+    text-align center
+    margin 85px 0
+    .email
+      width 300px
+      padding 5px
+      padding-left 0
+      border 0
+      border-bottom 4px solid black
+      font-size .9em
+      &:focus
+        outline: none
+    .submit
+      color grey
+      border 0
+      border-bottom 4px solid black
+      border-radius 0
+      background white
+      padding 5px 10px
+      cursor pointer
+      &:focus
+        outline: none
+      &:hover
+        opacity .95
+
+
+
+  #success
+    display none
+  #error
+    display none
+
 
 +desktop()
   #scene3

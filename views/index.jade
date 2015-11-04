@@ -7,19 +7,19 @@ block content
     ul#scene1
       
       li.layer(data-depth='0.80')
+        img.one(src='/img/memphis.jpg')
+      li.layer(data-depth='0.40')
+        img.two(src='/img/memphis.jpg')
+      li.layer(data-depth='0.00')
+        img.three(src='/img/memphis.jpg')
+      
+    ul#scene2
+      li.layer(data-depth='0.80')
         img.one(src='/img/full.jpg')
       li.layer(data-depth='0.40')
         img.two(src='/img/full.jpg')
       li.layer(data-depth='0.00')
         img.three(src='/img/full.jpg')
-      
-    ul#scene2
-      li.layer(data-depth='0.80')
-        img.one(src='/img/girl2.jpg')
-      li.layer(data-depth='0.40')
-        img.two(src='/img/girl2.jpg')
-      li.layer(data-depth='0.00')
-        img.three(src='/img/girl2.jpg')
     ul#scene3
       li.layer(data-depth='0.80')
         .logos
@@ -47,9 +47,22 @@ block content
               .text
                 p= instagram.likes.count
                 h3= instagram.caption.text
+  
+  
+  
   #subscribe
     h3
       | Noplace  will be available on all major e-book distribution platforms starting from Autumn 2015.
+    form#mailchimp(action='#', method='post', class='form-inline')
+      div#form(class='input-append')
+        input.email(type='email', name='email', placeholder='SIGNUP FOR OUR NEWSLETTER')
+        button.submit(type='submit', class='btn')
+          i.fa.fa-arrow-right.fa-2x
+    #success
+      p Subscribed! Check your mail for confirmation
+    #error
+      p An error occurred. Reload page and try again
+
   #social
     p follow us
     a(href="https://instagram.com/noplacemag/")

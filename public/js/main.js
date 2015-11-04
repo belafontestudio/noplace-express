@@ -22,3 +22,19 @@ function toggleSomething() {
 
 var timer = setInterval(toggleSomething, 2000);
 // 1000 = Initial timer when the page is first loaded
+
+
+$( "#mailchimp" ).submit(function( event ) {
+  event.preventDefault();
+  var email = $("input.email").val();
+  $.ajax({
+    method: "POST",
+    url: "/list/"+email+"/subscribe",
+  })
+  .done(function( res ) {
+    console.log(res);
+  })
+  .fail(function( jqXHR, textStatus ) {
+    alert( "Request failed: " + textStatus );
+  });
+});
