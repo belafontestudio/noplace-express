@@ -38,10 +38,11 @@ html, body
   overflow-x hidden
 #cover
   lost-center 100% 0
-  overflow-x hidden
+  position relative
 
-#scene1,#scene2,#scene3
-  overflow-x hidden
+
+#scene3
+  overflow hidden
 ul#scene1, ul#scene2
   float left
   width 50%
@@ -102,7 +103,7 @@ ul#scene1, ul#scene2
     font-family youngserif
 
 #mission
-  lost-center 30% 0
+  lost-center 70% 0
 
   h2
 
@@ -111,7 +112,28 @@ ul#scene1, ul#scene2
     font-size 20px
     margin-bottom 100px
 
+#change-issue
+  lost-center 80% 0
+  margin-bottom 80px
+  .left
 
+
+    lost-column 5/5
+    line-height 36px
+    h2
+      font-size 30px
+      font-family youngserif
+    p
+      font-size 22px
+  a.ibook
+    margin 0 auto
+    width 150px
+    display block
+
+  .right
+    lost-column 5/5
+  img
+    width 100%
 #social
   lost-center 50% 0
   text-align center
@@ -216,8 +238,10 @@ ul#scene1, ul#scene2
 
   #success
     display none
+    text-align center
   #error
     display none
+    text-align center
 
 
 +desktop()
@@ -226,3 +250,14 @@ ul#scene1, ul#scene2
       width 554px
     img
       width 554px
+  #change-issue
+    margin-top 50px
+    margin-bottom 100px
+    lost-center 80% 0
+    .left
+      lost-column 2/5
+      margin-top 65px
+      a.ibook
+        margin 0
+    .right
+      lost-column 3/5

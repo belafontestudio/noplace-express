@@ -35,7 +35,7 @@ body {
   margin-right: auto;
   padding-left: 0;
   padding-right: 0;
-  overflow-x: visible;
+  position: relative;
 }
 #cover:before {
   content: '';
@@ -46,10 +46,8 @@ body {
   display: table;
   clear: both;
 }
-#scene1,
-#scene2,
 #scene3 {
-  overflow: visible;
+  overflow: hidden;
 }
 ul#scene1,
 ul#scene2 {
@@ -66,7 +64,7 @@ ul#scene2 img {
 ul#scene1 li.girl,
 ul#scene2 li.girl {
   height: 800px;
-  /*overflow: hidden;*/
+  overflow: hidden;
 }
 ul#scene1 img.girl,
 ul#scene2 img.girl {
@@ -139,7 +137,7 @@ ul#scene2 img.three {
 }
 #mission {
   *zoom: 1;
-  max-width: 30%;
+  max-width: 70%;
   margin-left: auto;
   margin-right: auto;
   padding-left: 0;
@@ -159,6 +157,74 @@ ul#scene2 img.three {
   text-align: left;
   font-size: 20px;
   margin-bottom: 100px;
+}
+#change-issue {
+  *zoom: 1;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 80px;
+}
+#change-issue:before {
+  content: '';
+  display: table;
+}
+#change-issue:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+#change-issue .left {
+  width: calc(99.99% * 5/5 - (30px - 30px * 5/5));
+  line-height: 36px;
+}
+#change-issue .left:nth-child(n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+#change-issue .left:last-child {
+  margin-right: 0;
+}
+#change-issue .left:nth-child(5n) {
+  margin-right: 0;
+}
+#change-issue .left:nth-child(5n + 1) {
+  clear: left;
+}
+#change-issue .left h2 {
+  font-size: 30px;
+  font-family: youngserif;
+}
+#change-issue .left p {
+  font-size: 22px;
+}
+#change-issue a.ibook {
+  margin: 0 auto;
+  width: 150px;
+  display: block;
+}
+#change-issue .right {
+  width: calc(99.99% * 5/5 - (30px - 30px * 5/5));
+}
+#change-issue .right:nth-child(n) {
+  float: left;
+  margin-right: 30px;
+  clear: none;
+}
+#change-issue .right:last-child {
+  margin-right: 0;
+}
+#change-issue .right:nth-child(5n) {
+  margin-right: 0;
+}
+#change-issue .right:nth-child(5n + 1) {
+  clear: left;
+}
+#change-issue img {
+  width: 100%;
 }
 #social {
   *zoom: 1;
@@ -344,9 +410,11 @@ ul#scene2 img.three {
 }
 #subscribe #success {
   display: none;
+  text-align: center;
 }
 #subscribe #error {
   display: none;
+  text-align: center;
 }
 @media only screen and (min-width: 1050px) {
   #scene3 .logos {
@@ -354,6 +422,63 @@ ul#scene2 img.three {
   }
   #scene3 img {
     width: 554px;
+  }
+  #change-issue {
+    margin-top: 50px;
+    margin-bottom: 100px;
+    *zoom: 1;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #change-issue:before {
+    content: '';
+    display: table;
+  }
+  #change-issue:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #change-issue .left {
+    width: calc(99.99% * 2/5 - (30px - 30px * 2/5));
+    margin-top: 65px;
+  }
+  #change-issue .left:nth-child(n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  #change-issue .left:last-child {
+    margin-right: 0;
+  }
+  #change-issue .left:nth-child(5n) {
+    margin-right: 0;
+  }
+  #change-issue .left:nth-child(5n + 1) {
+    clear: left;
+  }
+  #change-issue .left a.ibook {
+    margin: 0;
+  }
+  #change-issue .right {
+    width: calc(99.99% * 3/5 - (30px - 30px * 3/5));
+  }
+  #change-issue .right:nth-child(n) {
+    float: left;
+    margin-right: 30px;
+    clear: none;
+  }
+  #change-issue .right:last-child {
+    margin-right: 0;
+  }
+  #change-issue .right:nth-child(5n) {
+    margin-right: 0;
+  }
+  #change-issue .right:nth-child(5n + 1) {
+    clear: left;
   }
 }
 

@@ -5,14 +5,14 @@ block content
   //- p Welcome to #{title}
   #cover
     ul#scene1
-      
+
       li.layer(data-depth='0.80')
         img.one(src='/img/memphis.jpg')
       li.layer(data-depth='0.40')
         img.two(src='/img/memphis.jpg')
       li.layer(data-depth='0.00')
         img.three(src='/img/memphis.jpg')
-      
+
     ul#scene2
       li.layer(data-depth='0.80')
         img.one(src='/img/full.jpg')
@@ -27,12 +27,26 @@ block content
           img.ci(srcset='/img/ci.png 1x, /img/ci@2x.png 2x')
   #vision
     h1
-      | Noplace is a biannual digital magazine 
+      | Noplace is a biannual digital magazine
       br
-      | that will let you travel trough the stories of people doing outstanding things around the globe.    
+      | that will let you travel trough the stories of people doing outstanding things around the globe.
   #mission
     h2
       | The magazine collects photographic essays, interviews and article inspired by a common topic for each issue, related to fashion, culture, art, architecture, design, food and lifestyle.
+
+  #change-issue
+    .left
+      h2
+        | The Change Issue
+      p
+        | Change is something that you can write, a change is a story, some of the stories need long writing and some just a single word. <br /><br />
+        | Download it now on iOS devices
+      a.ibook(href="https://itunes.apple.com/us/book/noplace/id1061802857?ls=1&mt=11")
+        img(src='/img/ibooks.svg')
+
+    .right
+      img(srcset='/img/z.png 1x, /img/z@2x.png 2x')
+
   #instagram-feed
     each instagram in instagrams
       //- script.
@@ -47,12 +61,12 @@ block content
               .text
                 p= instagram.likes.count
                 h3= instagram.caption.text
-  
-  
-  
+
+
+
   #subscribe
     h3
-      | Noplace  will be available on all major e-book distribution platforms starting from Autumn 2015.
+      | Subscribe and we will update you only with new content and next issues
     form#mailchimp(action='#', method='post', class='form-inline')
       div#form(class='input-append')
         input.email(type='email', name='email', placeholder='SIGNUP FOR OUR NEWSLETTER')
@@ -75,4 +89,3 @@ block content
       i.fa.fa-tumblr.fa-2x
   #footer
     p ©2015 Noplace Magazine — a Belafonte Studio publication, all rights reserved.
-    
